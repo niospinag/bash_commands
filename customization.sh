@@ -3,7 +3,7 @@ sudo snap install starship
 echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
 # change color gnome-theme
-sudo pacman -S dconf-cl
+sudo apt-get install dconf-cl
 git clone https://github.com/dracula/gnome-terminal
 cd gnome-terminal
 ./install.sh -1 
