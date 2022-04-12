@@ -22,3 +22,6 @@ mkdir -p /usr/share/themes/
 sudo mv gtk /usr/share/themes/
 gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
 gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
+
+#Installation of tweaks
+sudo apt install gnome-tweaks
