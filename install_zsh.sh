@@ -48,6 +48,8 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 #instalar autocompletion y autosuggestion
 cd /Downloads
+git clone https://github.com/marlonrichert/zsh-autocomplete
+sudo mv zsh-autocomplete /usr/share
 git clone https://github.com/zsh-users/zsh-autosuggestions
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting
@@ -67,7 +69,8 @@ cd ~
 echo "# Plugins
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-plugins/sudo.plugin.zsh" >> ~/.zshrc
+source /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /usr/share/zsh-plugings/sudo.plugin.zsh" >> ~/.zshrc
 # echo 'source ~/Downloads/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh' >> ~/.zshrc
 
 #intalamos el bat y lsd SI QUIERES LA ULTIMA VERSION BUSCALA EN RELEASE GITHUB
@@ -84,7 +87,9 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
-alias cat='bat' " >> ~/.zshrc
+alias cat='/usr/bin/bat'
+alias catn='/usr/bin/cat'
+alias catnl='/usr/bin/bat --pagin=never' " >> ~/.zshrc
 
 
 #instalar el fzf y ranger
