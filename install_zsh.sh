@@ -3,7 +3,7 @@
 user=$USER
 
 # instalamos la zsh y otros paquetes
-sudo apt install zsh curl wget firejail -y
+sudo apt install zsh curl wget -y
 
 #descargamos la fuente 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
@@ -47,7 +47,7 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 
 #instalar autocompletion y autosuggestion
-cd /Downloads
+cd ~/Downloads
 git clone https://github.com/marlonrichert/zsh-autocomplete
 sudo mv zsh-autocomplete /usr/share
 git clone https://github.com/zsh-users/zsh-autosuggestions
