@@ -36,7 +36,7 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 # 2 quiet 
 # y yes
 
-
+#remember to add  to the .p10k
 
 
 # no olvide instalar la powerlevel10k en usuario root
