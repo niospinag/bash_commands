@@ -1,9 +1,9 @@
-!bin/bash
+# !bin/bash
 
 user=$USER
 
 # instalamos la zsh y otros paquetes
-sudo apt install zsh curl wget firejail
+sudo apt install zsh curl wget firejail -y
 
 #descargamos la fuente 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
@@ -33,7 +33,7 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 # 2 many icons
 # 1 concise
 # y yes
-# q quiet 
+# 2 quiet 
 # y yes
 
 
@@ -78,6 +78,15 @@ sudo dpkg -i bat_0.20.0_amd64.deb
 sudo dpkg -i lsd_0.21.0_amd64.deb
 
 
+echo "# Manual aliases
+alias ll='lsd -lh --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias l='lsd --group-dirs=first'
+alias lla='lsd -lha --group-dirs=first'
+alias ls='lsd --group-dirs=first'
+alias cat='bat' " >> ~/.zshrc
+
+
 #instalar el fzf y ranger
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
@@ -87,6 +96,6 @@ sudo apt install ranger
 
 
 #definimos zsh por default
-usermod --shell /usr/bin/zsh root
-usermod --shell /usr/bin/zsh $user
+sudo usermod --shell /usr/bin/zsh root
+sudo usermod --shell /usr/bin/zsh $user
 
