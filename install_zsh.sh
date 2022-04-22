@@ -89,7 +89,12 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='/usr/bin/bat'
 alias catn='/usr/bin/cat'
-alias catnl='/usr/bin/bat --pagin=never' " >> ~/.zshrc
+alias catnl='/usr/bin/bat --pagin=never' 
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory " >> ~/.zshrc
 
 
 #instalar el fzf y ranger
