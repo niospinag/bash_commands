@@ -90,6 +90,7 @@ alias ls='lsd --group-dirs=first'
 alias cat='/usr/bin/bat'
 alias catn='/usr/bin/cat'
 alias catnl='/usr/bin/bat --pagin=never' 
+alias ulinux='sudo apt update && sudo apt upgrade -y'
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -107,5 +108,5 @@ sudo apt install ranger
 
 #definimos zsh por default
 sudo usermod --shell /usr/bin/zsh root
-sudo usermod --shell /usr/bin/zsh $user
+sudo usermod --shell /usr/bin/zsh $USER
 
